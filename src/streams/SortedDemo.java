@@ -10,9 +10,9 @@ public class SortedDemo {
 
 		List<String> strList = Arrays.asList("b", "ab", "aa", "z");
 
-		list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::print);
+		strList.stream().sorted((c1,c2)->c2.compareTo(c1)).forEach(System.out::print);
 
-		strList.stream().sorted().forEach(System.out::println);
+		//strList.stream().sorted().forEach(System.out::println);
 
 		List<Employee> emp = Arrays.asList(new Employee(1, "raj", 400), new Employee(2, "lilly", 200),
 				new Employee(3, "chris", 600), new Employee(1, "john", 100));
